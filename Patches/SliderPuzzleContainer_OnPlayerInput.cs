@@ -27,9 +27,15 @@ namespace MoreSliderPuzzles.Patches
                 if (loadedPuzzles == null)
                 {
                     loadedPuzzles = SliderPuzzleLoader.LoadAllPuzzles();
-                    ContainersMod.AddOpenTimes(overrideSceneId, overrideSaveId, loadedPuzzles.Count);
+                    if (loadedPuzzles.Count > 0)
+                    {
+                        ContainersMod.AddOpenTimes(overrideSceneId, overrideSaveId, loadedPuzzles.Count);
+                    }
                 }
-                __instance.puzzleInfo = loadedPuzzles[__instance.saveState.State.intVal % loadedPuzzles.Count];
+                if (loadedPuzzles.Count > 0)
+                {
+                    __instance.puzzleInfo = loadedPuzzles[__instance.saveState.State.intVal % loadedPuzzles.Count];
+                }
                 return;
             }
         }

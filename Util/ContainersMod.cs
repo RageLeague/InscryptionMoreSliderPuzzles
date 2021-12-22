@@ -6,16 +6,15 @@ namespace MoreSliderPuzzles.Util
 {
     public static class ContainersMod
     {
-        public static Dictionary<Tuple<string, int>, int> max_open_times = new Dictionary<Tuple<string, int>, int>()
+        public static Dictionary<Tuple<string, int>, int> max_open_times = new()
         {
             // { new Tuple<string, int>("GBC_Temple_Nature", 34565083), 2 }
         };
 
         public static int MaxOpenTimes(string scene, int id)
         {
-            int result;
             // Try look up the result in max_open_times
-            if (max_open_times.TryGetValue(new Tuple<string, int>(scene, id), out result))
+            if (max_open_times.TryGetValue(new Tuple<string, int>(scene, id), out int result))
             {
                 return result;
             }
