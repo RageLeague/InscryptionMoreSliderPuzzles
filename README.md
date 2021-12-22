@@ -31,3 +31,5 @@ A `.pdef` file contains 4 lines, with each line containing 4 entries, separated 
 Each entry can be padded by whitespaces, and empty lines will be ignored.
 
 The puzzles will appear in the order of their path, so puzzles with a lexicographically smaller name will appear first.
+
+See the example puzzles for more details.
