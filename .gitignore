@@ -332,3 +332,6 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# Ignore Assembly-CSharp.dll
+lib/Assembly-CSharp.dll
