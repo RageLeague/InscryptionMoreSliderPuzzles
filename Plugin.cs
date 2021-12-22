@@ -11,8 +11,8 @@ namespace MoreSliderPuzzles
   [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
   public partial class Plugin : BaseUnityPlugin
   {
-    private const string PluginGuid = "rageleague.inscryption.testmod";
-    private const string PluginName = "InscryptionTestMod";
+    private const string PluginGuid = "rageleague.inscryption.moresliderpuzzles";
+    private const string PluginName = "MoreSliderPuzzles";
     private const string PluginVersion = "1.0.0.0";
 
     internal static ManualLogSource Log;
