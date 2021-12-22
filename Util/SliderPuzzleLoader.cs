@@ -12,7 +12,7 @@ namespace MoreSliderPuzzles.Util
     {
         public static List<SliderPuzzleInfo> LoadAllPuzzles()
         {
-            List<SliderPuzzleInfo> allPuzzles = new List<SliderPuzzleInfo>();
+            List<SliderPuzzleInfo> allPuzzles = new();
             foreach (string file in Directory.EnumerateFiles(Paths.PluginPath, "*.pdef", SearchOption.AllDirectories))
             {
                 string data = File.ReadAllText(file);
