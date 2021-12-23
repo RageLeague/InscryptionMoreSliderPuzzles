@@ -1,0 +1,9 @@
+{
+    "name": "More Slider Puzzles",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/RageLeague/InscryptionMoreSliderPuzzles",
+    "description": "A mod for Inscryption that adds more slider puzzles to the GBC section of the game in the cabin.",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1701"
+    ]
+}
