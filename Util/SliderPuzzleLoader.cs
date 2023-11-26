@@ -5,6 +5,7 @@ using System.IO;
 using BepInEx;
 using DiskCardGame;
 using GBC;
+using BepInEx.Logging;
 
 namespace MoreSliderPuzzles.Util
 {
@@ -19,8 +20,19 @@ namespace MoreSliderPuzzles.Util
                 try
                 {
                     allPuzzles.Add(SliderPuzzleUtil.ConvertToPuzzle(data));
-                } 
-                catch {}
+                    Console.Write("Loaded " + file + " puzlle");
+                }
+                catch { }
+            }
+            System.Random rng = new System.Random();
+            int n = allPuzzles.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                SliderPuzzleInfo value = allPuzzles[k];
+                allPuzzles[k] = allPuzzles[n];
+                allPuzzles[n] = value;
             }
             return allPuzzles;
         }

@@ -13,7 +13,7 @@ namespace MoreSliderPuzzles
   {
     private const string PluginGuid = "rageleague.inscryption.moresliderpuzzles";
     private const string PluginName = "MoreSliderPuzzles";
-    private const string PluginVersion = "1.0.0.0";
+    private const string PluginVersion = "1.0.1.0";
 
     internal static ManualLogSource Log;
 
