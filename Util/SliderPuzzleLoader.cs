@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-using BepInEx;
+﻿using BepInEx;
+using BepInEx.Configuration;
+using BepInEx.Logging;
 using DiskCardGame;
-using GBC;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.CompilerServices;
+using UnityEngine.Internal;
 
 namespace MoreSliderPuzzles.Util
 {
@@ -15,14 +17,35 @@ namespace MoreSliderPuzzles.Util
             List<SliderPuzzleInfo> allPuzzles = new();
             foreach (string file in Directory.EnumerateFiles(Paths.PluginPath, "*.pdef", SearchOption.AllDirectories))
             {
+                if (file.EndsWith("_example.pdef"))
+                {
+                    continue;
+                }
                 string data = File.ReadAllText(file);
                 try
                 {
                     allPuzzles.Add(SliderPuzzleUtil.ConvertToPuzzle(data));
-                } 
-                catch {}
+                    Console.Write("Loaded " + file + " puzlle");
+                }
+                catch { }
             }
-            return allPuzzles;
+            if (Plugin.Randomized.Value)
+            {
+                Random rng = new Random();
+                int n = allPuzzles.Count;
+                while (n > 1)
+                {
+                    n--;
+                    int k = rng.Next(n + 1);
+                    SliderPuzzleInfo value = allPuzzles[k];
+                    allPuzzles[k] = allPuzzles[n];
+                    allPuzzles[n] = value;
+                }
+                return allPuzzles;
+            } else
+            {
+                return allPuzzles;
+            }
         }
     }
 }

@@ -7,16 +7,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DiskCardGame;
 using MoreSliderPuzzles.Util;
+using System.Security.Cryptography;
+using Pixelplacement.TweenSystem;
 
 namespace MoreSliderPuzzles.Patches
 {
     [HarmonyPatch(typeof(SliderPuzzleContainer), "OnPlayerInput")]
-    public class SliderPuzzleContainer_OnPlayerInput
+    public static class SliderPuzzleContainer_OnPlayerInput
     {
         public static List<SliderPuzzleInfo> loadedPuzzles;
         public static string overrideSceneId = "GBC_Temple_Nature";
         public static int overrideSaveId = 34565083;
-
         public static void Prefix(SliderPuzzleContainer __instance, out SliderPuzzleInfo __state)
         {
             string sceneName = SceneManager.GetActiveScene().name;
