@@ -1,12 +1,11 @@
 using DiskCardGame;
 using GBC;
 using HarmonyLib;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace MoreSliderPuzzles.Patches
 {
-
+    /*
     [HarmonyPatch]
     internal class PixelSliderPuzzleSliderPatch
     {
@@ -34,12 +33,12 @@ namespace MoreSliderPuzzles.Patches
             {
                 GameObject abilityObj = instance.transform.Find("Stats/PixelAbilityIcons/AbilityIcons_1").gameObject;
 
-                attackObj = SerializedUnityObject.Instantiate(abilityObj, abilityObj.transform.parent);
+                attackObj = GameObject.Instantiate(abilityObj, abilityObj.transform.parent);
                 attackObj.name = "PixelSliderAttackStatIcon";
                 attackObj.transform.localPosition = new(-0.12f, -0.125f, 0f);
                 attackObj.SetActive(false);
 
-                healthObj = SerializedUnityObject.Instantiate(abilityObj, abilityObj.transform.parent);
+                healthObj = GameObject.Instantiate(abilityObj, abilityObj.transform.parent);
                 healthObj.name = "PixelSliderHealthStatIcon";
                 healthObj.transform.localPosition = new(0.12f, -0.125f, 0f);
                 healthObj.SetActive(false);
@@ -52,4 +51,5 @@ namespace MoreSliderPuzzles.Patches
             healthObj.SetActive(applyToHealth);
         }
     }
+    */
 }

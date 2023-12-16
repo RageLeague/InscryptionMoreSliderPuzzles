@@ -5,11 +5,8 @@
     <Description>This mod for Inscryption adds more slider puzzles to the GBC section of the game.</Description>
     <Version>1.0.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>10.0</LangVersion>
     <DebugType>full</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>False</Optimize>
   </PropertyGroup>
 
   <ItemGroup>

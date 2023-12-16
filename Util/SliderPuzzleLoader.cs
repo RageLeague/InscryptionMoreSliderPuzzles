@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.CompilerServices;
 using UnityEngine.Internal;
+using GBC;
 
 namespace MoreSliderPuzzles.Util
 {
@@ -17,19 +18,23 @@ namespace MoreSliderPuzzles.Util
             List<SliderPuzzleInfo> allPuzzles = new();
             foreach (string file in Directory.EnumerateFiles(Paths.PluginPath, "*.pdef", SearchOption.AllDirectories))
             {
-                if (file.EndsWith("_example.pdef"))
+                if (file.EndsWith("_example.pdef") || file == null)
                 {
                     continue;
                 }
-                string data = File.ReadAllText(file);
-                try
+                else
                 {
-                    allPuzzles.Add(SliderPuzzleUtil.ConvertToPuzzle(data));
-                    Console.Write("Loaded " + file + " puzlle");
+
+                    string data = File.ReadAllText(file);
+                    try
+                    {
+                        allPuzzles.Add(SliderPuzzleUtil.ConvertToPuzzle(data));
+                        Console.Write("Loaded " + file + " puzlle");
+                    }
+                    catch { }
                 }
-                catch { }
             }
-            if (Plugin.Randomized.Value)
+            if (Plugin.Randomized.Value == true)
             {
                 Random rng = new Random();
                 int n = allPuzzles.Count;

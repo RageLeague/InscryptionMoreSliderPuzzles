@@ -3,8 +3,8 @@
 A mod for Inscryption that adds more slider puzzles to the GBC section of the game in the cabin.
 
 This mod is mainly a proof of concept to show that replacing puzzles in the GBC section of the game works. 
-Some things might not work as expected, such as certain sigils not displaying correctly or certain sigils,
-not working in slider puzzles. This mod does not fix these things, However stats will show thanks to WhistleWind
+Some things might not work as expected, such as certain sigils not displaying correctly or certain sigils 
+not working in slider puzzles. This mod does not fix these things.
 
 ## Details
 
@@ -24,14 +24,12 @@ You need to find the required files (`MoreSliderPuzzles.dll` and a folder contai
 
 ## Define Custom Puzzles
 
-Your puzzles must be defined in the same folder with `MoreSliderPuzzles.dll`, or in any subfolder of the `Plugins` folder. The extension must be `.pdef`.
+Your puzzles must be defined in the same folder with `MoreSliderPuzzles.dll`, or in a subfolder. The extension must be `.pdef`.
 
 A `.pdef` file contains 4 lines, with each line containing 4 entries, separated by `|`. For each entry, you may leave it empty
 (for an empty space), or an ID representing the card. The ID of the card can be prepended by `!`. If so, the tile is locked.
 Each entry can be padded by whitespaces, and empty lines will be ignored.
 
-An ID is defined as the in code name, it does not require the GUID to be present, If it is present an error will pop up telling you which ID failed to load.
-
-The puzzles will be Randomized, if you wish to configure this there is a config available.
+The puzzles will appear in the order of their path, so puzzles with a lexicographically smaller name will appear first.
 
 See the example puzzles for more details.

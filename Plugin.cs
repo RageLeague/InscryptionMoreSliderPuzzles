@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 namespace MoreSliderPuzzles
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
-    public partial class Plugin : BaseUnityPlugin
+    public class Plugin : BaseUnityPlugin
     {
         public const string PluginGuid = "rageleague.inscryption.moresliderpuzzles";
         public const string PluginName = "MoreSliderPuzzles";
@@ -18,13 +18,6 @@ namespace MoreSliderPuzzles
         internal static ManualLogSource Log;
 
         public static ConfigEntry<bool> Randomized;
-        public void ConfigDefinitions()
-        {
-            Randomized = Config.Bind<bool>("RageLeague.SliderPuzzlesAPI",
-                    "Should Puzzles Be Randomized?",
-                    true,
-                    "Should the Loaded Puzzles order in game be Randomized?");
-        }
 
         public void Awake()
         {
@@ -34,6 +27,14 @@ namespace MoreSliderPuzzles
 
             Harmony harmony = new Harmony(PluginGuid);
             harmony.PatchAll();
+            Randomized = Config.Bind<bool>("RageLeague.SliderPuzzlesAPI",
+        "Should Puzzles Be Randomized?",
+        true,
+        "Should the Loaded Puzzles order in game be Randomized?");
+            if (Randomized == null)
+            {
+                Logger.LogInfo($"Has the Config Been Made?");
+            }
         }
 
         public void Start()

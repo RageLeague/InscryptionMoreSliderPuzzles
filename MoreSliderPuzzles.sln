@@ -5,16 +5,40 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreSliderPuzzles", "MoreSliderPuzzles.csproj", "{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}"
 EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Inscryption", "..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Inscryption\Inscryption.exe", "{84ED9ED7-00BA-4C08-9163-575289E18E83}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = 
+		RemoteMachine = HP-PAVILION-GAM
+		StartingDirectory = C:\Program Files (x86)\Steam\steamapps\common\Inscryption
+		Environment = Default
+		LaunchingEngine = 5fff7536-0c87-462d-8fd2-7971d948e6dc
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = Yes
+		IORedirection = Auto
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Debug|x86.Build.0 = Debug|Any CPU
 		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Release|x86.ActiveCfg = Release|Any CPU
+		{DB27EC94-8D11-49F9-B2DB-F977B011F6CD}.Release|x86.Build.0 = Release|Any CPU
+		{84ED9ED7-00BA-4C08-9163-575289E18E83}.Debug|Any CPU.ActiveCfg = Release|x86
+		{84ED9ED7-00BA-4C08-9163-575289E18E83}.Debug|x86.ActiveCfg = Release|x86
+		{84ED9ED7-00BA-4C08-9163-575289E18E83}.Release|Any CPU.ActiveCfg = Release|x86
+		{84ED9ED7-00BA-4C08-9163-575289E18E83}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
