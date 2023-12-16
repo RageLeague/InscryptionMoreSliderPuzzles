@@ -60,3 +60,11 @@ An ID is defined as the in code name, it does not require the GUID to be present
 The puzzles will be Randomized, if you wish to configure this there is a config available.
 
 See the example puzzles for more details.
+
+## Contributers:
+
+* RageLeague - Made The Original Mod
+* Creator - Porting
+* WhistleWind - StatIcon Patch
+
+Want to contribute? Open a PR at: https://github.com/SaxbyMod/InscryptionMoreSliderPuzzlesMiniUpdate
